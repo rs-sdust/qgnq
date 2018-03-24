@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApi", "WebApi\WebApi.csproj", "{DD87703D-54BB-44F0-8EEB-E639E8107DAB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SunGolden.DbUtils", "SunGolden.DbUtils\SunGolden.DbUtils.csproj", "{974163A4-2902-47A2-A763-36A6E1043FC7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DD87703D-54BB-44F0-8EEB-E639E8107DAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD87703D-54BB-44F0-8EEB-E639E8107DAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD87703D-54BB-44F0-8EEB-E639E8107DAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD87703D-54BB-44F0-8EEB-E639E8107DAB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{974163A4-2902-47A2-A763-36A6E1043FC7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{974163A4-2902-47A2-A763-36A6E1043FC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{974163A4-2902-47A2-A763-36A6E1043FC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{974163A4-2902-47A2-A763-36A6E1043FC7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
