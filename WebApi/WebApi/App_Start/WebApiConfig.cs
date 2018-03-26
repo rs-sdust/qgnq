@@ -10,11 +10,16 @@ namespace WebApi
     {
         public static void Register(HttpConfiguration config)
         {
+            config.Routes.MapHttpRoute(
+            name: "Dic",
+            routeTemplate: "{controller}/{action}/",
+            defaults: new { controller = "Dic", action = "GetProductType"}
+        );
 
             config.Routes.MapHttpRoute(
-                name: "DefaultApi",
-                routeTemplate: "{controller}/{action}/{id}",
-                defaults: new { controller = "Dic", action = "GetProductType", id = UrlParameter.Optional }
+                name: "Product",
+                routeTemplate: "{controller}/{action}/{date}/{productType}/{cropType}/{diseaseType}/{provId}",
+                defaults: new { controller = "Product", action = "GetProvRealTimeProduct", date = DateTime.Now, productType = 0, cropType = 0, diseaseType = UrlParameter.Optional, provId = UrlParameter .Optional}
             );
         }
     }
