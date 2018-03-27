@@ -19,6 +19,7 @@ using System.Net.Http;
 using System.Web.Http;
 using System.Data;
 using Newtonsoft.Json;
+using System.Xml;
 
 /// <summary>
 /// The Controllers namespace.
@@ -53,25 +54,36 @@ namespace WebApi.Controllers
             string str = "select * from public.\"Dic_DiseaseType\";";
             return SunGolden.DBUtils.DbHelperPostgresql.ExecuteQuery(str, 1000).Tables[0];
         }
-
+        // GET api/Dic/GetCatalog
         [HttpGet]
-        public DataTable GetProvJson()
+        public string GetCatalog()
         {
-            string str = @"SELECT jsonb_build_object(
-    'type',     'FeatureCollection',
-    'features', jsonb_agg(feature)
-)
-FROM (
-  SELECT jsonb_build_object(
-    'type',       'Feature',
-    'id',         provid,
-    'geometry',   ST_AsGeoJSON(geom)::jsonb,
-    'properties', to_jsonb(row) - 'geom'
-  ) AS feature
-  FROM (SELECT provid,provname,geom FROM geom_prov_slim) row) features;";
-
-            return SunGolden.DBUtils.DbHelperPostgresql.ExecuteQuery(str, 1000).Tables[0];
+            string str = "select \"Catalog\" from public.\"Dic_Catalog\" where \"Name\" = 'web';";
+            string xml = SunGolden.DBUtils.DbHelperPostgresql.ExecuteQuery(str, 1000).Tables[0].Rows[0][0].ToString();
+            XmlDocument doc = new XmlDocument();
+            doc.LoadXml(xml);
+            string json = Newtonsoft.Json.JsonConvert.SerializeXmlNode(doc);
+            return json.Replace("@", "");
         }
+
+//        [HttpGet]
+//        public DataTable GetProvJson()
+//        {
+//            string str = @"SELECT jsonb_build_object(
+//    'type',     'FeatureCollection',
+//    'features', jsonb_agg(feature)
+//)
+//FROM (
+//  SELECT jsonb_build_object(
+//    'type',       'Feature',
+//    'id',         provid,
+//    'geometry',   ST_AsGeoJSON(geom)::jsonb,
+//    'properties', to_jsonb(row) - 'geom'
+//  ) AS feature
+//  FROM (SELECT provid,provname,geom FROM geom_prov_slim) row) features;";
+
+//            return SunGolden.DBUtils.DbHelperPostgresql.ExecuteQuery(str, 1000).Tables[0];
+//        }
 
 
     }
