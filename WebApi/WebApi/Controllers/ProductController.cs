@@ -24,19 +24,19 @@ namespace WebApi.Controllers
         public DataTable GetProvRealTimeProduct(DateTime date, int productType, int cropType = -1, int diseaseType = -1, int provId = -1)
         {
             string str=null;
-            //if (cropType == -1)
-            //{
-            //    cropType = 0;
-            //}
-            //if (diseaseType == -1)
-            //{
-            //    diseaseType = 0;
-            //}
-            //if (provId == -1)
-            //{
-            //    str = string.Format("select \"provid\",\"provname\",\"geom\",\"ProductValue\" from public.\"Product_Realtime_Province\" join \"geom_province\" on \"geom_province\".\"provid\" = \"Product_Realtime_Province\".\"ProvinceId\" where \"ProductDate\" = '{0}' and \"ProductTypeId\" = {1} and \"CropTypeId\" = {2} and \"DiseaseTypeId\"  = {3} ", date, productType, cropType, diseaseType);
-            //}
-            //else
+            if (cropType == -1)
+            {
+                cropType = 0;
+            }
+            if (diseaseType == -1)
+            {
+                diseaseType = 0;
+            }
+            if (provId == -1)
+            {
+                str = string.Format("select \"provid\",\"provname\",\"geom\",\"ProductValue\" from public.\"Product_Realtime_Province\" join \"geom_province\" on \"geom_province\".\"provid\" = \"Product_Realtime_Province\".\"ProvinceId\" where \"ProductDate\" = '{0}' and \"ProductTypeId\" = {1} and \"CropTypeId\" = {2} and \"DiseaseTypeId\"  = {3} ", date, productType, cropType, diseaseType);
+            }
+            else
             {
                 str = string.Format("select \"provid\",\"provname\",\"geom\",\"ProductValue\" from public.\"Product_Realtime_Province\" join \"geom_province\" on \"geom_province\".\"provid\" = \"Product_Realtime_Province\".\"ProvinceId\" where \"ProductDate\" = '{0}' and \"ProductTypeId\" = {1} and \"CropTypeId\" = {2} and \"DiseaseTypeId\"  = {3} and \"ProvinceId\" = {4}", date, productType, cropType, diseaseType, provId);
             }
