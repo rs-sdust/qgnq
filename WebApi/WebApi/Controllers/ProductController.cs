@@ -24,14 +24,6 @@ namespace WebApi.Controllers
         public DataTable GetProvRealTimeProduct(DateTime date, int productType, int cropType = -1, int diseaseType = -1, int provId = -1)
         {
             string str=null;
-            if (cropType == -1)
-            {
-                cropType = 0;
-            }
-            if (diseaseType == -1)
-            {
-                diseaseType = 0;
-            }
             if (provId == -1)
             {
                 str = string.Format("select \"provid\",\"provname\",\"geom\",\"ProductValue\" from public.\"Product_Realtime_Province\" join \"geom_province\" on \"geom_province\".\"provid\" = \"Product_Realtime_Province\".\"ProvinceId\" where \"ProductDate\" = '{0}' and \"ProductTypeId\" = {1} and \"CropTypeId\" = {2} and \"DiseaseTypeId\"  = {3} ", date, productType, cropType, diseaseType);
@@ -79,14 +71,6 @@ namespace WebApi.Controllers
         {
 
             string str = null;
-            if (cropType == -1)
-            {
-                cropType = 0;
-            }
-            if (diseaseType == -1)
-            {
-                diseaseType = 0;
-            }
             if (cityId == -1)
             {
                 str = string.Format("select \"cityid\",\"cityname\",\"geom\",\"ProductValue\" from public.\"Product_Realtime_City\" join \"geom_city\" on \"geom_city\".\"cityid\" = \"Product_Realtime_City\".\"CityId\" where \"ProductDate\" = '{0}' and \"ProductTypeId\" = {1} and \"CropTypeId\" = {2} and \"DiseaseTypeId\"  = {3} ", date, productType, cropType, diseaseType);
@@ -133,14 +117,6 @@ namespace WebApi.Controllers
         public DataTable GetCountyRealTimeProduct(DateTime date, int productType, int cropType = -1, int diseaseType = -1, int countyId = -1)
         {
             string str = null;
-            if (cropType == -1)
-            {
-                cropType = 0;
-            }
-            if (diseaseType == -1)
-            {
-                diseaseType = 0;
-            }
             if (countyId == -1)
             {
                 str = string.Format("select \"counid\",\"counname\",\"geom\",\"ProductValue\" from public.\"Product_Realtime_County\" join \"geom_county\" on \"geom_county\".\"counid\" = \"Product_Realtime_County\".\"CountyId\" where \"ProductDate\" = '{0}' and \"ProductTypeId\" = {1} and \"CropTypeId\" = {2} and \"DiseaseTypeId\"  = {3} ", date, productType, cropType, diseaseType);
@@ -185,16 +161,7 @@ namespace WebApi.Controllers
         /// <returns>DataTable</returns>
         [HttpGet]
         public DataTable GetRealTimeDistribution(DateTime date, int productType, int cropType = -1, int diseaseType = -1)
-        {
-            
-            if (cropType == -1)
-            {
-                cropType = 0;
-            }
-            if (diseaseType == -1)
-            {
-                diseaseType = 0;
-            }
+        { 
             string str = string.Format("select \"Id\",\"GeoString\" from public.\"Product_RealTime_Distribution\"  where \"DistributionDate\" = '{0}' and \"ProductTypeId\" = {1} and \"CropTypeId\" = {2} and \"DiseaseTypeId\"  = {3} ", date, productType, cropType, diseaseType);
             return SunGolden.DBUtils.DbHelperPostgresql.ExecuteQuery(str, 1000).Tables[0];
 
