@@ -32,6 +32,10 @@ namespace WebApi.Controllers
     public class DicController : ApiController
     {
         // GET api/Dic/GetProductType
+        /// <summary>
+        /// 获取产品类型字典.
+        /// </summary>
+        /// <returns>DataTable.</returns>
         [HttpGet]
         public DataTable GetProductType()
         {
@@ -40,6 +44,10 @@ namespace WebApi.Controllers
         }
 
         // GET api/Dic/GetCropType
+        /// <summary>
+        /// 获取作物类型字典
+        /// </summary>
+        /// <returns>DataTable.</returns>
         [HttpGet]
         public DataTable GetCropType()
         {
@@ -48,6 +56,10 @@ namespace WebApi.Controllers
         }
 
         // GET api/Dic/GetDiseaseType
+        /// <summary>
+        /// 获取病害类型字典
+        /// </summary>
+        /// <returns>DataTable.</returns>
         [HttpGet]
         public DataTable GetDiseaseType()
         {
@@ -55,6 +67,10 @@ namespace WebApi.Controllers
             return SunGolden.DBUtils.DbHelperPostgresql.ExecuteQuery(str, 1000).Tables[0];
         }
         // GET api/Dic/GetCatalog
+        /// <summary>
+        /// 获取目录配置
+        /// </summary>
+        /// <returns>System.String.</returns>
         [HttpGet]
         public string GetCatalog()
         {

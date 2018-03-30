@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <publishData>
-  <publishProfile publishUrl="C:\Users\sdzh09\Desktop\新建文件夹" deleteExistingFiles="True" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="False" msdeploySkipExtraFilesOnServer="True" msdeployMarkAsApp="False" profileName="配置文件1" publishMethod="FileSystem" replaceMatchingFiles="False" userName="" savePWD="False" userPWD="" SelectedForPublish="True">
-    <file relUrl="bin/SunGolden.DBUtils.pdb" publishTime="03/24/2018 09:33:06" />
+  <publishProfile publishUrl="ftp://192.168.2.100/" deleteExistingFiles="True" ftpAnonymousLogin="True" ftpPassiveMode="True" msdeploySite="" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="False" msdeploySkipExtraFilesOnServer="True" msdeployMarkAsApp="False" profileName="配置文件1" publishMethod="FTP" replaceMatchingFiles="False" userName="" savePWD="False" userPWD="" SelectedForPublish="True">
+    <file relUrl="bin/SunGolden.DBUtils.pdb" publishTime="03/30/2018 17:21:57" />
     <file relUrl="Global.asax" publishTime="03/23/2018 12:27:22" />
     <file relUrl="bin/EntityFramework.xml" publishTime="03/23/2018 12:27:24" />
     <file relUrl="bin/EntityFramework.dll" publishTime="03/23/2018 12:27:24" />
     <file relUrl="bin/System.Net.Http.WebRequest.xml" publishTime="03/23/2018 12:27:29" />
     <file relUrl="bin/System.Web.Providers.dll" publishTime="03/23/2018 12:27:29" />
     <file relUrl="bin/System.Web.Http.WebHost.xml" publishTime="03/23/2018 12:27:29" />
-    <file relUrl="bin/SunGolden.DBUtils.dll" publishTime="03/24/2018 09:33:06" />
+    <file relUrl="bin/SunGolden.DBUtils.dll" publishTime="03/30/2018 17:21:57" />
     <file relUrl="bin/System.Web.Razor.dll" publishTime="03/23/2018 12:27:28" />
     <file relUrl="bin/System.Web.Mvc.xml" publishTime="03/23/2018 12:27:28" />
     <file relUrl="bin/System.Net.Http.dll" publishTime="03/23/2018 12:27:29" />
@@ -21,7 +21,7 @@
     <file relUrl="bin/System.Web.WebPages.Razor.xml" publishTime="03/23/2018 12:27:28" />
     <file relUrl="bin/System.Web.WebPages.dll" publishTime="03/23/2018 12:27:28" />
     <file relUrl="packages.config" publishTime="03/23/2018 12:27:30" />
-    <file relUrl="bin/WebApi.dll" publishTime="03/24/2018 09:33:07" />
+    <file relUrl="bin/WebApi.dll" publishTime="03/30/2018 17:21:58" />
     <file relUrl="bin/System.Web.Razor.xml" publishTime="03/23/2018 12:27:28" />
     <file relUrl="bin/System.Web.WebPages.xml" publishTime="03/23/2018 12:27:28" />
     <file relUrl="bin/System.Web.Http.dll" publishTime="03/23/2018 12:27:29" />
@@ -35,8 +35,8 @@
     <file relUrl="bin/System.Web.Http.WebHost.dll" publishTime="03/23/2018 12:27:29" />
     <file relUrl="bin/System.Net.Http.xml" publishTime="03/23/2018 12:27:29" />
     <file relUrl="bin/Microsoft.Web.Infrastructure.dll" publishTime="03/23/2018 12:27:28" />
-    <file relUrl="Web.config" publishTime="03/24/2018 09:33:19" />
-    <file relUrl="bin/WebApi.pdb" publishTime="03/24/2018 09:33:07" />
+    <file relUrl="Web.config" publishTime="03/30/2018 17:22:17" />
+    <file relUrl="bin/WebApi.pdb" publishTime="03/30/2018 17:21:58" />
     <file relUrl="bin/System.Net.Http.Formatting.xml" publishTime="03/23/2018 12:27:28" />
     <file relUrl="favicon.ico" publishTime="03/23/2018 12:27:22" />
     <file relUrl="bin/System.Web.Optimization.dll" publishTime="03/23/2018 12:27:29" />
