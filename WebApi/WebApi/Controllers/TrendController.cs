@@ -12,6 +12,16 @@ namespace WebApi.Controllers
     public class TrendController : ApiController
     {
      
+        /// <summary>
+        /// 获取指定省份的时间序列数据，用户点击后的折线图绘制
+        /// </summary>
+        /// <param name="start">起始日期</param>
+        /// <param name="days">获取的数据天数</param>
+        /// <param name="RegionId">省份编号</param>
+        /// <param name="productType">产品类型编号</param>
+        /// <param name="cropType">作物类型编号</param>
+        /// <param name="diseaseType">病害类型编号</param>
+        /// <returns></returns>
         [HttpGet]
         public DataTable GetProvTrend(DateTime start, int days, int RegionId, int productType, int cropType = -1, int diseaseType = -1)
         {
@@ -23,16 +33,24 @@ namespace WebApi.Controllers
             if (DateTime.Compare(Maxday, end) >= 0)
             {
                 str = string.Format("select \"ProductDate\",\"ProductValue\" from public.\"Product_Realtime_Province\" where (\"ProductDate\"between '{0}' and '{1}') and \"ProvinceId\" = {2} and \"ProductTypeId\" = {3} and \"CropTypeId\" = {4} and \"DiseaseTypeId\"  = {5} ", start, end, RegionId, productType, cropType, diseaseType);
-
             }
             else
             {
                 str = string.Format("select \"ProductDate\",\"ProductValue\" from public.\"Product_Realtime_Province\"  where (\"ProductDate\"between '{0}' and '{1}') and \"ProvinceId\" = {2} and \"ProductTypeId\" = {3} and \"CropTypeId\" = {4} and \"DiseaseTypeId\"  = {5} ", start, Maxday, RegionId, productType, cropType, diseaseType);
                 str += string.Format("UNION select \"ProductDate\",\"ProductValue\" from public.\"Product_Forecast_Province\" where (\"ProductDate\"between '{0}' and '{1}') and \"ProvinceId\" = {2} and \"ProductTypeId\" = {3} and \"CropTypeId\" = {4} and \"DiseaseTypeId\"  = {5} ", Maxday.AddDays(1), end, RegionId, productType, cropType, diseaseType);
-
             }
             return SunGolden.DBUtils.DbHelperPostgresql.ExecuteQuery(str, 1000).Tables[0];
         }
+        /// <summary>
+        /// 获取指定地市的时间序列数据，用户点击后的折线图绘制
+        /// </summary>
+        /// <param name="start">起始日期</param>
+        /// <param name="days">获取的数据天数</param>
+        /// <param name="RegionId">地市编号</param>
+        /// <param name="productType">产品类型编号</param>
+        /// <param name="cropType">作物类型编号</param>
+        /// <param name="diseaseType">病害类型编号</param>
+        /// <returns></returns>
         [HttpGet]
         public DataTable GetCityTrend(DateTime start, int days, int RegionId, int productType, int cropType = -1, int diseaseType = -1)
         {
@@ -40,20 +58,27 @@ namespace WebApi.Controllers
             DateTime end = start.AddDays(days);
             string strday = string.Format("select  max ( \"ProductDate\" ) from \"Product_Realtime_City\"");
             DateTime Maxday = Convert.ToDateTime(SunGolden.DBUtils.DbHelperPostgresql.ExecuteQuery(strday, 1000).Tables[0].Rows[0][0]);
-            //string  day = string.Format("select date_part ('day','{0}'::timestamp - '{1}' :: timestamp) ", Maxday, start);
             if (DateTime.Compare(Maxday, end) >= 0)
             {
                 str = string.Format("select \"ProductDate\",\"ProductValue\" from public.\"Product_Realtime_City\" where (\"ProductDate\"between '{0}' and '{1}') and \"CityId\" = {2} and \"ProductTypeId\" = {3} and \"CropTypeId\" = {4} and \"DiseaseTypeId\"  = {5} ", start, end, RegionId, productType, cropType, diseaseType);
-
             }
             else
             {
                 str = string.Format("select \"ProductDate\",\"ProductValue\" from public.\"Product_Realtime_City\" where (\"ProductDate\"between '{0}' and '{1}') and \"CityId\" = {2} and \"ProductTypeId\" = {3} and \"CropTypeId\" = {4} and \"DiseaseTypeId\"  = {5} ", start, Maxday, RegionId, productType, cropType, diseaseType);
                 str += string.Format("UNION select \"ProductDate\",\"ProductValue\" from public.\"Product_Forecast_City\" where (\"ProductDate\"between '{0}' and '{1}') and \"CityId\" = {2} and \"ProductTypeId\" = {3} and \"CropTypeId\" = {4} and \"DiseaseTypeId\"  = {5} ", Maxday.AddDays(1), end, RegionId, productType, cropType, diseaseType);
-
             }
             return SunGolden.DBUtils.DbHelperPostgresql.ExecuteQuery(str, 1000).Tables[0];
         }
+        /// <summary>
+        /// 获取指定区县的时间序列数据，用户点击后的折线图绘制
+        /// </summary>
+        /// <param name="start">起始日期</param>
+        /// <param name="days">获取的数据天数</param>
+        /// <param name="RegionId">区县编号</param>
+        /// <param name="productType">产品类型编号</param>
+        /// <param name="cropType">作物类型编号</param>
+        /// <param name="diseaseType">病害类型编号</param>
+        /// <returns></returns>
         [HttpGet]
         public DataTable GetCountyTrend(DateTime start, int days, int RegionId, int productType, int cropType = -1, int diseaseType = -1)
         {
@@ -61,17 +86,14 @@ namespace WebApi.Controllers
             DateTime end = start.AddDays(days);
             string strday = string.Format("select  max ( \"ProductDate\" ) from \"Product_Realtime_County\"");
             DateTime Maxday = Convert.ToDateTime(SunGolden.DBUtils.DbHelperPostgresql.ExecuteQuery(strday, 1000).Tables[0].Rows[0][0]);
-            //string  day = string.Format("select date_part ('day','{0}'::timestamp - '{1}' :: timestamp) ", Maxday, start);
             if (DateTime.Compare(Maxday, end) >= 0)
             {
                 str = string.Format("select \"ProductDate\",\"ProductValue\" from public.\"Product_Realtime_County\" where (\"ProductDate\"between '{0}' and '{1}') and \"CountyId\" = {2} and \"ProductTypeId\" = {3} and \"CropTypeId\" = {4} and \"DiseaseTypeId\"  = {5} ", start, end, RegionId, productType, cropType, diseaseType);
-
             }
             else
             {
                 str = string.Format("select\"ProductDate\",\"ProductValue\" from public.\"Product_Realtime_County\" where (\"ProductDate\"between '{0}' and '{1}') and \"CountyId\" = {2} and \"ProductTypeId\" = {3} and \"CropTypeId\" = {4} and \"DiseaseTypeId\"  = {5} ", start, Maxday, RegionId, productType, cropType, diseaseType);
                 str += string.Format("UNION select \"ProductDate\",\"ProductValue\" from public.\"Product_Forecast_County\" where (\"ProductDate\"between '{0}' and '{1}') and \"CountyId\" = {2} and \"ProductTypeId\" = {3} and \"CropTypeId\" = {4} and \"DiseaseTypeId\"  = {5} ", Maxday.AddDays(1), end, RegionId, productType, cropType, diseaseType);
-
             }
             return SunGolden.DBUtils.DbHelperPostgresql.ExecuteQuery(str, 1000).Tables[0];
         }
