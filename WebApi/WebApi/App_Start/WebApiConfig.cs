@@ -19,8 +19,8 @@ namespace WebApi
             //Product
             config.Routes.MapHttpRoute(
                 name: "Product",
-                routeTemplate: "{controller}/{action}/{date}/{productType}/{cropType}/{diseaseType}/{provId}",
-                defaults: new { controller = "Product", action = "GetProvRealTimeProduct", date = DateTime.Now, productType = 0, cropType = 0, diseaseType =UrlParameter.Optional, provId = UrlParameter.Optional }
+                routeTemplate: "{controller}/{action}/{date}/{productType}/{cropType}/{diseaseType}/{RegionId}",
+                defaults: new { controller = "Product", action = "GetProvRealTimeProduct", date = DateTime.Now, productType = 0, cropType = 0, diseaseType = UrlParameter.Optional, RegionId = UrlParameter.Optional }
             );
             //config.MapHttpAttributeRoutes();
             config.Routes.MapHttpRoute(
