@@ -18,20 +18,20 @@ namespace WebApi.Controllers
         /// <param name="productType">产品类型编号</param>
         /// <param name="cropType">作物类型编号</param>
         /// <param name="diseaseType">病害类型编号</param>
-        /// <param name="provId">省份编号</param>
+        /// <param name="RegionId">省份编号</param>
         /// <returns>DataTable</returns>
         [HttpGet]
-        public DataTable GetProvForecastProduct(DateTime date, int productType, int cropType = -1, int diseaseType = -1, int provId = -1)
+        public DataTable GetProvForecastProduct(DateTime date, int productType, int cropType = -1, int diseaseType = -1, int RegionId = -1)
         {
 
             string str = null;
-            if (provId == -1)
+            if (RegionId == -1)
             {
                 str = string.Format("select \"provid\",\"provname\",\"geom\",\"ProductValue\" from public.\"Product_Forecast_Province\" join \"geom_province\" on \"geom_province\".\"provid\" = \"Product_Forecast_Province\".\"ProvinceId\" where \"ProductDate\" = '{0}' and \"ProductTypeId\" = {1} and \"CropTypeId\" = {2} and \"DiseaseTypeId\"  = {3} ", date, productType, cropType, diseaseType);
             }
             else
             {
-                str = string.Format("select \"provid\",\"provname\",\"geom\",\"ProductValue\" from public.\"Product_Forecast_Province\" join \"geom_province\" on \"geom_province\".\"provid\" = \"Product_Forecast_Province\".\"ProvinceId\" where \"ProductDate\" = '{0}' and \"ProductTypeId\" = {1} and \"CropTypeId\" = {2} and \"DiseaseTypeId\"  = {3} and \"ProvinceId\" = {4}", date, productType, cropType, diseaseType, provId);
+                str = string.Format("select \"provid\",\"provname\",\"geom\",\"ProductValue\" from public.\"Product_Forecast_Province\" join \"geom_province\" on \"geom_province\".\"provid\" = \"Product_Forecast_Province\".\"ProvinceId\" where \"ProductDate\" = '{0}' and \"ProductTypeId\" = {1} and \"CropTypeId\" = {2} and \"DiseaseTypeId\"  = {3} and \"ProvinceId\" = {4}", date, productType, cropType, diseaseType, RegionId);
             }
             string tojson = string.Format(@"SELECT
 	                                jsonb_build_object (
@@ -66,19 +66,19 @@ namespace WebApi.Controllers
         /// <param name="productType">产品类型编号</param>
         /// <param name="cropType">作物类型编号</param>
         /// <param name="diseaseType">病害类型编号</param>
-        /// <param name="provId">地市编号</param>
+        /// <param name="RegionId">地市编号</param>
         /// <returns>DataTable</returns>
         [HttpGet]
-        public DataTable GetCityForecastProduct(DateTime date, int productType, int cropType = -1, int diseaseType = -1, int cityId = -1)
+        public DataTable GetCityForecastProduct(DateTime date, int productType, int cropType = -1, int diseaseType = -1, int RegionId = -1)
         {
             string str = null;
-            if (cityId == -1)
+            if (RegionId == -1)
             {
                 str = string.Format("select \"cityid\",\"cityname\",\"geom\",\"ProductValue\" from public.\"Product_Forecast_City\" join \"geom_city\" on \"geom_city\".\"cityid\" = \"Product_Forecast_City\".\"CityId\" where \"ProductDate\" = '{0}' and \"ProductTypeId\" = {1} and \"CropTypeId\" = {2} and \"DiseaseTypeId\"  = {3} ", date, productType, cropType, diseaseType);
             }
             else
             {
-                str = string.Format("select \"cityid\",\"cityname\",\"geom\",\"ProductValue\" from public.\"Product_Forecast_City\" join \"geom_city\" on \"geom_city\".\"cityid\" = \"Product_Forecast_City\".\"CityId\" where \"ProductDate\" = '{0}' and \"ProductTypeId\" = {1} and \"CropTypeId\" = {2} and \"DiseaseTypeId\"  = {3} and \"CityId\" = {4}", date, productType, cropType, diseaseType, cityId);
+                str = string.Format("select \"cityid\",\"cityname\",\"geom\",\"ProductValue\" from public.\"Product_Forecast_City\" join \"geom_city\" on \"geom_city\".\"cityid\" = \"Product_Forecast_City\".\"CityId\" where \"ProductDate\" = '{0}' and \"ProductTypeId\" = {1} and \"CropTypeId\" = {2} and \"DiseaseTypeId\"  = {3} and \"ProvinceId\" = {4}", date, productType, cropType, diseaseType, RegionId);
             }
             string tojson = string.Format(@"SELECT
 	                                jsonb_build_object (
@@ -112,19 +112,19 @@ namespace WebApi.Controllers
         /// <param name="productType">产品类型编号</param>
         /// <param name="cropType">作物类型编号</param>
         /// <param name="diseaseType">病害类型编号</param>
-        /// <param name="provId">区县编号</param>
+        /// <param name="RegionId">区县编号</param>
         /// <returns>DataTable</returns>
         [HttpGet]
-        public DataTable GetCountyForecastProduct(DateTime date, int productType, int cropType = -1, int diseaseType = -1, int countyId = -1)
+        public DataTable GetCountyForecastProduct(DateTime date, int productType, int cropType = -1, int diseaseType = -1, int RegionId = -1)
         {
             string str = null;
-            if (countyId == -1)
+            if (RegionId == -1)
             {
                 str = string.Format("select \"counid\",\"counname\",\"geom\",\"ProductValue\" from public.\"Product_Forecast_County\" join \"geom_county\" on \"geom_county\".\"counid\" = \"Product_Forecast_County\".\"CountyId\" where \"ProductDate\" = '{0}' and \"ProductTypeId\" = {1} and \"CropTypeId\" = {2} and \"DiseaseTypeId\"  = {3} ", date, productType, cropType, diseaseType);
             }
             else
             {
-                str = string.Format("select \"counid\",\"counname\",\"geom\",\"ProductValue\" from public.\"Product_Forecast_County\" join \"geom_county\" on \"geom_county\".\"counid\" = \"Product_Forecast_County\".\"CountyId\" where \"ProductDate\" = '{0}' and \"ProductTypeId\" = {1} and \"CropTypeId\" = {2} and \"DiseaseTypeId\"  = {3} and \"CountyId\" = {4}", date, productType, cropType, diseaseType, countyId);
+                str = string.Format("select \"counid\",\"counname\",\"geom\",\"ProductValue\" from public.\"Product_Forecast_County\" join \"geom_county\" on \"geom_county\".\"counid\" = \"Product_Forecast_County\".\"CountyId\" where \"ProductDate\" = '{0}' and \"ProductTypeId\" = {1} and \"CropTypeId\" = {2} and \"DiseaseTypeId\"  = {3} and \"CityId\" = {4}", date, productType, cropType, diseaseType, RegionId);
             }
             string tojson = string.Format(@"SELECT
 	                                jsonb_build_object (
