@@ -63,6 +63,10 @@ namespace SunGolden.DBUtils
                     {
                         throw ex;
                     }
+                    finally
+                    {
+                        conn.Close();
+                    }
                     return ds;
                 }
             }

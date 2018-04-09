@@ -36,7 +36,7 @@ namespace SunGolden.DBUtils
                 string ConStringEncrypt = ConfigurationManager.AppSettings["ConStringEncrypt"];
                 if (ConStringEncrypt == "true")
                 {
-                    _connectionString = DESEncrypt.Decrypt(_connectionString);
+                    _connectionString = Encryption.DEncrypt.Decrypt(_connectionString);
                 }
                 return _connectionString; 
             }
@@ -53,7 +53,7 @@ namespace SunGolden.DBUtils
             string ConStringEncrypt = ConfigurationManager.AppSettings["ConStringEncrypt"];
             if (ConStringEncrypt == "true")
             {
-                connectionString = DESEncrypt.Decrypt(connectionString);
+                connectionString = Encryption.DEncrypt.Decrypt(connectionString);
             }
             return connectionString;
         }
@@ -70,7 +70,7 @@ namespace SunGolden.DBUtils
                 string ConStringEncrypt = ConfigurationManager.AppSettings["ConStringEncrypt"];
                 if (ConStringEncrypt == "true")
                 {
-                    _connectionString = DESEncrypt.Decrypt(_connectionString);
+                    _connectionString = Encryption.DEncrypt.Decrypt(_connectionString);
                 }
                 return _connectionString;
             }
