@@ -39,7 +39,7 @@ namespace WebApi.Controllers
         [HttpGet]
         public DataTable GetProductType()
         {
-            string str = "select * from public.\"Dic_ProductType\";";
+            string str = @"select * from f_dic_getprodtype();";
             return SunGolden.DBUtils.DbHelperPostgresql.ExecuteQuery(str, 1000).Tables[0];
         }
 
@@ -51,7 +51,7 @@ namespace WebApi.Controllers
         [HttpGet]
         public DataTable GetCropType()
         {
-            string str = "select * from public.\"Dic_CropType\";";
+            string str = @"select * from f_dic_getcroptype();";
             return SunGolden.DBUtils.DbHelperPostgresql.ExecuteQuery(str, 1000).Tables[0];
         }
 
@@ -63,7 +63,7 @@ namespace WebApi.Controllers
         [HttpGet]
         public DataTable GetDiseaseType()
         {
-            string str = "select * from public.\"Dic_DiseaseType\";";
+            string str = @"select * from f_dic_getdiseasetype();";
             return SunGolden.DBUtils.DbHelperPostgresql.ExecuteQuery(str, 1000).Tables[0];
         }
         // GET api/Dic/GetCatalog
@@ -72,35 +72,14 @@ namespace WebApi.Controllers
         /// </summary>
         /// <returns>System.String.</returns>
         [HttpGet]
-        public string GetCatalog()
+        public string GetCatalog(string client)
         {
-            string str = "select \"Catalog\" from public.\"Dic_Catalog\" where \"Name\" = 'web';";
+            string str = string.Format("select * from f_dic_getcatalog('{0}');",client);
             string xml = SunGolden.DBUtils.DbHelperPostgresql.ExecuteQuery(str, 1000).Tables[0].Rows[0][0].ToString();
             XmlDocument doc = new XmlDocument();
             doc.LoadXml(xml);
             string json = Newtonsoft.Json.JsonConvert.SerializeXmlNode(doc);
             return json.Replace("@", "");
         }
-
-//        [HttpGet]
-//        public DataTable GetProvJson()
-//        {
-//            string str = @"SELECT jsonb_build_object(
-//    'type',     'FeatureCollection',
-//    'features', jsonb_agg(feature)
-//)
-//FROM (
-//  SELECT jsonb_build_object(
-//    'type',       'Feature',
-//    'id',         provid,
-//    'geometry',   ST_AsGeoJSON(geom)::jsonb,
-//    'properties', to_jsonb(row) - 'geom'
-//  ) AS feature
-//  FROM (SELECT provid,provname,geom FROM geom_prov_slim) row) features;";
-
-//            return SunGolden.DBUtils.DbHelperPostgresql.ExecuteQuery(str, 1000).Tables[0];
-//        }
-
-
     }
 }
