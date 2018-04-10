@@ -75,11 +75,18 @@ namespace WebApi.Controllers
         public string GetCatalog(string client)
         {
             string str = string.Format("select * from f_dic_getcatalog('{0}');",client);
-            string xml = SunGolden.DBUtils.DbHelperPostgresql.ExecuteQuery(str, 1000).Tables[0].Rows[0][0].ToString();
-            XmlDocument doc = new XmlDocument();
-            doc.LoadXml(xml);
-            string json = Newtonsoft.Json.JsonConvert.SerializeXmlNode(doc);
-            return json.Replace("@", "");
+            DataTable res = SunGolden.DBUtils.DbHelperPostgresql.ExecuteQuery(str, 1000).Tables[0];
+            if (res.Rows.Count > 0)
+            {
+                XmlDocument doc = new XmlDocument();
+                doc.LoadXml(res.Rows[0][0].ToString());
+                string json = Newtonsoft.Json.JsonConvert.SerializeXmlNode(doc);
+                return json.Replace("@", "");
+            }
+            else
+            {
+                return "未找到指定目录，请确认客户端类型！";
+            }
         }
     }
 }
