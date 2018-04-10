@@ -1,4 +1,4 @@
-CREATE OR REPLACE FUNCTION f_Product_getcountyrealtimeproduct(IN sdate varchar, IN iprodtype int4, IN icroptype int4, IN idiseasetype int4, IN iregionid int4) 
+CREATE OR REPLACE FUNCTION f_Product_getcountyrealtimeproduct(IN ddate date, IN iprodtype int4, IN icroptype int4, IN idiseasetype int4, IN iregionid int4) 
 RETURNS TABLE (jsonstring jsonb)
 AS $BODY$
 BEGIN
@@ -30,7 +30,8 @@ BEGIN
 							prod_realtime_county
 						JOIN geom_county ON geom_county.counid = prod_realtime_county.counid
 						WHERE
-							prod_realtime_county.prodtime = to_date(sDate, 'YYYY-MM-DD')
+-- 							prod_realtime_county.prodtime = to_date(sDate, 'YYYY-MM-DD')
+								prod_realtime_county.prodtime = ddate
 						AND prod_realtime_county.prodtype = iprodType
 						AND prod_realtime_county.croptype = icropType
 						AND prod_realtime_county.diseasetype = idiseaseType
@@ -64,7 +65,8 @@ BEGIN
 								prod_realtime_county
 						JOIN geom_county ON geom_county.counid = prod_realtime_county.counid
 							WHERE
-								prod_realtime_county.prodtime = to_date(sDate, 'YYYY-MM-DD')
+-- 								prod_realtime_county.prodtime = to_date(sDate, 'YYYY-MM-DD')
+									prod_realtime_county.prodtime = ddate
 							AND prod_realtime_county.prodtype = iprodType
 							AND prod_realtime_county.croptype = icropType
 							AND prod_realtime_county.diseasetype = idiseaseType

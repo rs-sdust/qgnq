@@ -1,4 +1,4 @@
-CREATE OR REPLACE FUNCTION f_Product_getprovrealtimeproduct(IN sdate varchar, IN iprodtype int4, IN icroptype int4, IN idiseasetype int4, IN iregionid int4) 
+CREATE OR REPLACE FUNCTION f_Product_getprovrealtimeproduct(IN ddate date, IN iprodtype int4, IN icroptype int4, IN idiseasetype int4, IN iregionid int4) 
 RETURNS TABLE (jsonstring jsonb)
 AS $BODY$
 BEGIN
@@ -31,7 +31,8 @@ BEGIN
 							prod_realtime_prov
 						JOIN geom_prov ON geom_prov.provid = prod_realtime_prov.provid
 						WHERE
-							prod_realtime_prov.prodtime = to_date(sDate, 'YYYY-MM-DD')
+-- 							prod_realtime_prov.prodtime = to_date(sDate, 'YYYY-MM-DD')
+								prod_realtime_prov.prodtime = ddate
 						AND prod_realtime_prov.prodtype = iprodType
 						AND prod_realtime_prov.croptype = icropType
 						AND prod_realtime_prov.diseasetype = idiseaseType
@@ -65,7 +66,8 @@ BEGIN
 								prod_realtime_prov
 						JOIN geom_prov ON geom_prov.provid = prod_realtime_prov.provid
 							WHERE
-								prod_realtime_prov.prodtime = to_date(sDate, 'YYYY-MM-DD')
+-- 								prod_realtime_prov.prodtime = to_date(sDate, 'YYYY-MM-DD')
+									prod_realtime_prov.prodtime = ddate
 							AND prod_realtime_prov.prodtype = iprodType
 							AND prod_realtime_prov.croptype = icropType
 							AND prod_realtime_prov.diseasetype = idiseaseType

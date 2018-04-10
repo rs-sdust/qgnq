@@ -1,4 +1,4 @@
-CREATE OR REPLACE FUNCTION f_forecast_getcountyforecastproduct(IN sdate varchar, IN iprodtype int4, IN icroptype int4, IN idiseasetype int4, IN iregionid int4) 
+CREATE OR REPLACE FUNCTION f_forecast_getcountyforecastproduct(IN ddate date, IN iprodtype int4, IN icroptype int4, IN idiseasetype int4, IN iregionid int4) 
 RETURNS TABLE (jsonstring jsonb)
 AS $BODY$
 BEGIN
@@ -30,7 +30,8 @@ BEGIN
 							prod_forecast_county
 						JOIN geom_county ON geom_county.counid = prod_forecast_county.counid
 						WHERE
-							prod_forecast_county.prodtime = to_date(sDate, 'YYYY-MM-DD')
+-- 							prod_forecast_county.prodtime = to_date(sDate, 'YYYY-MM-DD')
+								prod_forecast_county.prodtime = ddate
 						AND prod_forecast_county.prodtype = iprodType
 						AND prod_forecast_county.croptype = icropType
 						AND prod_forecast_county.diseasetype = idiseaseType
@@ -64,7 +65,8 @@ BEGIN
 								prod_forecast_county
 						JOIN geom_county ON geom_county.counid = prod_forecast_county.counid
 							WHERE
-								prod_forecast_county.prodtime = to_date(sDate, 'YYYY-MM-DD')
+-- 								prod_forecast_county.prodtime = to_date(sDate, 'YYYY-MM-DD')
+									prod_forecast_county.prodtime = ddate
 							AND prod_forecast_county.prodtype = iprodType
 							AND prod_forecast_county.croptype = icropType
 							AND prod_forecast_county.diseasetype = idiseaseType

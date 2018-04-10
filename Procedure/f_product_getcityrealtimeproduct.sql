@@ -1,4 +1,4 @@
-CREATE OR REPLACE FUNCTION f_product_getcityrealtimeproduct(IN sdate varchar, IN iprodtype int4, IN icroptype int4, IN idiseasetype int4, IN iregionid int4) 
+CREATE OR REPLACE FUNCTION f_product_getcityrealtimeproduct(IN ddate date, IN iprodtype int4, IN icroptype int4, IN idiseasetype int4, IN iregionid int4) 
 RETURNS TABLE (jsonstring jsonb)
 AS $BODY$
 BEGIN
@@ -30,7 +30,8 @@ BEGIN
 							prod_realtime_city
 						JOIN geom_city ON geom_city.cityid = prod_realtime_city.cityid
 						WHERE
-							prod_realtime_city.prodtime = to_date(sDate, 'YYYY-MM-DD')
+-- 							prod_realtime_city.prodtime = to_date(sDate, 'YYYY-MM-DD')
+								prod_realtime_city.prodtime = ddate
 						AND prod_realtime_city.prodtype = iprodType
 						AND prod_realtime_city.croptype = icropType
 						AND prod_realtime_city.diseasetype = idiseaseType
@@ -64,7 +65,8 @@ BEGIN
 								prod_realtime_city
 						JOIN geom_city ON geom_city.cityid = prod_realtime_city.cityid
 							WHERE
-								prod_realtime_city.prodtime = to_date(sDate, 'YYYY-MM-DD')
+-- 								prod_realtime_city.prodtime = to_date(sDate, 'YYYY-MM-DD')
+									prod_realtime_city.prodtime = ddate
 							AND prod_realtime_city.prodtype = iprodType
 							AND prod_realtime_city.croptype = icropType
 							AND prod_realtime_city.diseasetype = idiseaseType
