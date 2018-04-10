@@ -1,11 +1,11 @@
 CREATE
 OR REPLACE FUNCTION f_trend_getcitytrend (
-	startDate DATE,
+	startdate DATE,
 	iregionid INTEGER,
 	iprodtype INTEGER,
 	icroptype INTEGER,
 	idiseasetype INTEGER,
-	endday DATE
+	enddate DATE
 ) RETURNS TABLE (prodvalue FLOAT(53)) AS $Body$
 BEGIN
 
@@ -14,15 +14,15 @@ IF (
 		MAX (prodtime)
 	FROM
 		prod_realtime_city
-) >= endday  THEN
+) >= enddate  THEN
 	RETURN QUERY SELECT
 		prod_realtime_city.prodvalue
 	FROM
 		prod_realtime_city
 	WHERE
 		(
-			prod_realtime_city.prodtime BETWEEN startDate
-			AND endday
+			prod_realtime_city.prodtime BETWEEN startdate
+			AND enddate
 		)
 	AND prod_realtime_city.cityid = iregionid
 	AND prod_realtime_city.prodtype = iprodtype
@@ -35,7 +35,7 @@ IF (
 			prod_realtime_city
 		WHERE
 			(
-				prod_realtime_city.prodtime BETWEEN startDate
+				prod_realtime_city.prodtime BETWEEN startdate
 				AND (SELECT MAX (prodtime) FROM prod_realtime_prov)
 			)
 		AND prod_realtime_city.cityid = iregionid
@@ -50,7 +50,7 @@ IF (
 			WHERE
 				(
 					prod_forecast_city.prodtime BETWEEN (SELECT MAX (prodtime) FROM prod_realtime_prov)
-					AND endday
+					AND enddate
 				)
 			AND prod_forecast_city.cityid = iregionid
 			AND prod_forecast_city.prodtype = iprodtype
