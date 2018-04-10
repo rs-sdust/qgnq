@@ -65,15 +65,15 @@ namespace WebApi.Controllers
         /// <summary>
         /// 获取全国实时空间分布产品数据
         /// </summary>
-        /// <param name="productdate">产品日期</param>
+        /// <param name="date">产品日期</param>
         /// <param name="productType">产品类型编号</param>
         /// <param name="cropType">作物类型编号</param>
         /// <param name="diseaseType">病害类型编号</param>
         /// <returns>DataTable</returns>
         [HttpGet]
-        public DataTable GetRealTimeDistribution(DateTime productdate, int productType, int cropType = -1, int diseaseType = -1)
+        public DataTable GetRealTimeDistribution(DateTime date, int productType, int cropType = -1, int diseaseType = -1)
         {
-            string str = string.Format("select * from f_product_getrealtimedistribution('{0}',{1},{2},{3},{4});", productdate, productType, cropType, diseaseType);           
+           string str = string.Format("select * from f_product_getrealtimedistribution('{0}',{1},{2},{3});", date, productType, cropType, diseaseType);           
            return SunGolden.DBUtils.DbHelperPostgresql.ExecuteQuery(str, 1000).Tables[0];
 
         }

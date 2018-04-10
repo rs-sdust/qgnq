@@ -71,7 +71,7 @@ namespace WebApi.Controllers
         [HttpGet]
         public DataTable GetForecastDistribution(DateTime date, int productType, int cropType = -1, int diseaseType = -1)
         {
-            string str = string.Format("select * from f_forecast_getforecastdistribution('{0}',{1},{2},{3},{4});", date, productType, cropType, diseaseType);
+            string str = string.Format("select * from f_forecast_getforecastdistribution('{0}',{1},{2},{3});", date, productType, cropType, diseaseType);
             return SunGolden.DBUtils.DbHelperPostgresql.ExecuteQuery(str, 1000).Tables[0];
         }
     }
