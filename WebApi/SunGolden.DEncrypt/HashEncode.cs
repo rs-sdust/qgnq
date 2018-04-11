@@ -1,21 +1,34 @@
+ï»¿// ***********************************************************************
+// Assembly         : SunGolden.Encryption
+// Author           : RickerYan
+// Created          : 04-11-2018
+//
+// Last Modified By : RickerYan
+// Last Modified On : 04-09-2018
+// ***********************************************************************
+// <copyright file="HashEncode.cs" company="SunGolden">
+//     Copyright Â© SunGolden 2018
+// </copyright>
+// <summary>å“ˆå¸ŒåŠ å¯†</summary>
+// ***********************************************************************
 using System;
 using System.Text;
 using System.Security.Cryptography;
 namespace SunGolden.Encryption
 {
 	/// <summary>
-	/// µÃµ½Ëæ»ú°²È«Âë£¨¹şÏ£¼ÓÃÜ£©¡£
+	/// å¾—åˆ°éšæœºå®‰å…¨ç ï¼ˆå“ˆå¸ŒåŠ å¯†ï¼‰ã€‚
 	/// </summary>
 	public class HashEncode
 	{
 		public HashEncode()
 		{
 			//
-			// TODO: ÔÚ´Ë´¦Ìí¼Ó¹¹Ôìº¯ÊıÂß¼­
+			// TODO: åœ¨æ­¤å¤„æ·»åŠ æ„é€ å‡½æ•°é€»è¾‘
 			//
 		}
 		/// <summary>
-		/// µÃµ½Ëæ»ú¹şÏ£¼ÓÃÜ×Ö·û´®
+		/// å¾—åˆ°éšæœºå“ˆå¸ŒåŠ å¯†å­—ç¬¦ä¸²
 		/// </summary>
 		/// <returns></returns>
 		public static string GetSecurity()
@@ -24,7 +37,7 @@ namespace SunGolden.Encryption
 			return Security;
 		}
 		/// <summary>
-		/// µÃµ½Ò»¸öËæ»úÊıÖµ
+		/// å¾—åˆ°ä¸€ä¸ªéšæœºæ•°å€¼
 		/// </summary>
 		/// <returns></returns>
 		public static string GetRandomValue()
@@ -34,7 +47,7 @@ namespace SunGolden.Encryption
 			return RandomVaule;
 		}
 		/// <summary>
-		/// ¹şÏ£¼ÓÃÜÒ»¸ö×Ö·û´®
+		/// å“ˆå¸ŒåŠ å¯†ä¸€ä¸ªå­—ç¬¦ä¸²
 		/// </summary>
 		/// <param name="Security"></param>
 		/// <returns></returns>

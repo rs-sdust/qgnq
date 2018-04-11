@@ -1,12 +1,32 @@
-﻿using System;
+﻿// ***********************************************************************
+// Assembly         : SunGolden.Keygen
+// Author           : RickerYan
+// Created          : 04-11-2018
+//
+// Last Modified By : RickerYan
+// Last Modified On : 04-09-2018
+// ***********************************************************************
+// <copyright file="Program.cs" company="SunGolden">
+//     Copyright © SunGolden 2018
+// </copyright>
+// <summary>加解密工具</summary>
+// ***********************************************************************
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 namespace SunGolden.Keygen
 {
+    /// <summary>
+    /// Class Program.
+    /// </summary>
     class Program
     {
+        /// <summary>
+        /// Defines the entry point of the application.
+        /// </summary>
+        /// <param name="args">The arguments.</param>
         [STAThread]
         static void Main(string[] args)
         {

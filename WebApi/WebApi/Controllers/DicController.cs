@@ -11,14 +11,8 @@
 // </copyright>
 // <summary>获取数据字典</summary>
 // ***********************************************************************
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
-using System.Web.Http;
 using System.Data;
-using Newtonsoft.Json;
+using System.Web.Http;
 using System.Xml;
 
 /// <summary>
@@ -27,7 +21,7 @@ using System.Xml;
 namespace WebApi.Controllers
 {
     /// <summary>
-    /// Class DicController.
+    /// 数据字典控制器.
     /// </summary>
     public class DicController : ApiController
     {

@@ -11,7 +11,6 @@
 // </copyright>
 // <summary>从web.config获取数据库连接配置</summary>
 // ***********************************************************************
-using System;
 using System.Configuration;
 /// <summary>
 /// The DBUtils namespace.

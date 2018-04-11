@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
-using System.Web.Http;
 using System.Data;
-using Newtonsoft.Json;
+using System.Web.Http;
 
 namespace WebApi.Controllers
 {
+    /// <summary>
+    /// 趋势产品控制器.
+    /// </summary>
     public class TrendController : ApiController
     {
      
