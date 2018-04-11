@@ -4,3 +4,10 @@ C:\Users\sdzh09\Documents\Visual Studio 2010\Projects\WebApi\Output\Debug\SunGol
 C:\Users\sdzh09\Documents\Visual Studio 2010\Projects\WebApi\Output\Debug\SunGolden.DBUtils.pdb
 C:\Users\sdzh09\Documents\Visual Studio 2010\Projects\WebApi\SunGolden.DbUtils\obj\Debug\SunGolden.DBUtils.dll
 C:\Users\sdzh09\Documents\Visual Studio 2010\Projects\WebApi\SunGolden.DbUtils\obj\Debug\SunGolden.DBUtils.pdb
+G:\00农情速报\qgnq.git\trunk\WebApi\SunGolden.DbUtils\bin\Debug\SunGolden.DBUtils.dll
+G:\00农情速报\qgnq.git\trunk\WebApi\SunGolden.DbUtils\bin\Debug\SunGolden.DBUtils.pdb
+G:\00农情速报\qgnq.git\trunk\WebApi\SunGolden.DbUtils\obj\Debug\SunGolden.DBUtils.dll
+G:\00农情速报\qgnq.git\trunk\WebApi\SunGolden.DbUtils\obj\Debug\SunGolden.DBUtils.pdb
+G:\00农情速报\qgnq.git\trunk\WebApi\SunGolden.DbUtils\obj\Debug\SunGolden.DbUtils.csprojResolveAssemblyReference.cache
+G:\00农情速报\qgnq.git\trunk\WebApi\SunGolden.DbUtils\bin\Debug\SunGolden.Encryption.dll
+G:\00农情速报\qgnq.git\trunk\WebApi\SunGolden.DbUtils\bin\Debug\SunGolden.Encryption.pdb

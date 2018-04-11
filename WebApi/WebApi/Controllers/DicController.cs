@@ -74,6 +74,7 @@ namespace WebApi.Controllers
         [HttpGet]
         public string GetCatalog(string client)
         {
+
             string str = string.Format("select * from f_dic_getcatalog('{0}');",client);
             DataTable res = SunGolden.DBUtils.DbHelperPostgresql.ExecuteQuery(str, 1000).Tables[0];
             if (res.Rows.Count > 0)

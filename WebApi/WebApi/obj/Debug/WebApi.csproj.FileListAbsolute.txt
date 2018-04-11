@@ -1,42 +1,78 @@
-C:\Users\sdzh09\Documents\Visual Studio 2010\Projects\WebApi\Output\Debug\WebApi.dll
-C:\Users\sdzh09\Documents\Visual Studio 2010\Projects\WebApi\Output\Debug\WebApi.pdb
-C:\Users\sdzh09\Documents\Visual Studio 2010\Projects\WebApi\WebApi\bin\WebApi.dll
-C:\Users\sdzh09\Documents\Visual Studio 2010\Projects\WebApi\WebApi\bin\WebApi.pdb
-C:\Users\sdzh09\Documents\Visual Studio 2010\Projects\WebApi\WebApi\bin\Antlr3.Runtime.dll
-C:\Users\sdzh09\Documents\Visual Studio 2010\Projects\WebApi\WebApi\bin\EntityFramework.dll
-C:\Users\sdzh09\Documents\Visual Studio 2010\Projects\WebApi\WebApi\bin\Microsoft.Web.Infrastructure.dll
-C:\Users\sdzh09\Documents\Visual Studio 2010\Projects\WebApi\WebApi\bin\Newtonsoft.Json.dll
-C:\Users\sdzh09\Documents\Visual Studio 2010\Projects\WebApi\WebApi\bin\SunGolden.DBUtils.dll
-C:\Users\sdzh09\Documents\Visual Studio 2010\Projects\WebApi\WebApi\bin\System.Net.Http.dll
-C:\Users\sdzh09\Documents\Visual Studio 2010\Projects\WebApi\WebApi\bin\System.Net.Http.Formatting.dll
-C:\Users\sdzh09\Documents\Visual Studio 2010\Projects\WebApi\WebApi\bin\System.Net.Http.WebRequest.dll
-C:\Users\sdzh09\Documents\Visual Studio 2010\Projects\WebApi\WebApi\bin\System.Web.Helpers.dll
-C:\Users\sdzh09\Documents\Visual Studio 2010\Projects\WebApi\WebApi\bin\System.Web.Http.dll
-C:\Users\sdzh09\Documents\Visual Studio 2010\Projects\WebApi\WebApi\bin\System.Web.Http.WebHost.dll
-C:\Users\sdzh09\Documents\Visual Studio 2010\Projects\WebApi\WebApi\bin\System.Web.Mvc.dll
-C:\Users\sdzh09\Documents\Visual Studio 2010\Projects\WebApi\WebApi\bin\System.Web.Optimization.dll
-C:\Users\sdzh09\Documents\Visual Studio 2010\Projects\WebApi\WebApi\bin\System.Web.Providers.dll
-C:\Users\sdzh09\Documents\Visual Studio 2010\Projects\WebApi\WebApi\bin\System.Web.Razor.dll
-C:\Users\sdzh09\Documents\Visual Studio 2010\Projects\WebApi\WebApi\bin\System.Web.WebPages.Deployment.dll
-C:\Users\sdzh09\Documents\Visual Studio 2010\Projects\WebApi\WebApi\bin\System.Web.WebPages.dll
-C:\Users\sdzh09\Documents\Visual Studio 2010\Projects\WebApi\WebApi\bin\System.Web.WebPages.Razor.dll
-C:\Users\sdzh09\Documents\Visual Studio 2010\Projects\WebApi\WebApi\bin\WebGrease.dll
-C:\Users\sdzh09\Documents\Visual Studio 2010\Projects\WebApi\WebApi\bin\Npgsql.dll
-C:\Users\sdzh09\Documents\Visual Studio 2010\Projects\WebApi\WebApi\bin\Mono.Security.dll
-C:\Users\sdzh09\Documents\Visual Studio 2010\Projects\WebApi\WebApi\bin\SunGolden.DBUtils.pdb
-C:\Users\sdzh09\Documents\Visual Studio 2010\Projects\WebApi\WebApi\bin\EntityFramework.xml
-C:\Users\sdzh09\Documents\Visual Studio 2010\Projects\WebApi\WebApi\bin\Newtonsoft.Json.xml
-C:\Users\sdzh09\Documents\Visual Studio 2010\Projects\WebApi\WebApi\bin\System.Net.Http.xml
-C:\Users\sdzh09\Documents\Visual Studio 2010\Projects\WebApi\WebApi\bin\System.Net.Http.Formatting.xml
-C:\Users\sdzh09\Documents\Visual Studio 2010\Projects\WebApi\WebApi\bin\System.Net.Http.WebRequest.xml
-C:\Users\sdzh09\Documents\Visual Studio 2010\Projects\WebApi\WebApi\bin\System.Web.Helpers.xml
-C:\Users\sdzh09\Documents\Visual Studio 2010\Projects\WebApi\WebApi\bin\System.Web.Http.xml
-C:\Users\sdzh09\Documents\Visual Studio 2010\Projects\WebApi\WebApi\bin\System.Web.Http.WebHost.xml
-C:\Users\sdzh09\Documents\Visual Studio 2010\Projects\WebApi\WebApi\bin\System.Web.Mvc.xml
-C:\Users\sdzh09\Documents\Visual Studio 2010\Projects\WebApi\WebApi\bin\System.Web.Razor.xml
-C:\Users\sdzh09\Documents\Visual Studio 2010\Projects\WebApi\WebApi\bin\System.Web.WebPages.xml
-C:\Users\sdzh09\Documents\Visual Studio 2010\Projects\WebApi\WebApi\bin\System.Web.WebPages.Deployment.xml
-C:\Users\sdzh09\Documents\Visual Studio 2010\Projects\WebApi\WebApi\bin\System.Web.WebPages.Razor.xml
-C:\Users\sdzh09\Documents\Visual Studio 2010\Projects\WebApi\WebApi\obj\Debug\WebApi.csprojResolveAssemblyReference.cache
-C:\Users\sdzh09\Documents\Visual Studio 2010\Projects\WebApi\WebApi\obj\Debug\WebApi.dll
-C:\Users\sdzh09\Documents\Visual Studio 2010\Projects\WebApi\WebApi\obj\Debug\WebApi.pdb
+G:\00农情速报\qgnq.git\trunk\WebApi\WebApi\obj\Debug\WebApi.csprojResolveAssemblyReference.cache
+G:\00农情速报\qgnq.git\trunk\WebApi\WebApi\bin\ApplicationInsights.config
+G:\00农情速报\qgnq.git\trunk\WebApi\WebApi\bin\roslyn\csc.exe
+G:\00农情速报\qgnq.git\trunk\WebApi\WebApi\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+G:\00农情速报\qgnq.git\trunk\WebApi\WebApi\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+G:\00农情速报\qgnq.git\trunk\WebApi\WebApi\bin\roslyn\Microsoft.CodeAnalysis.dll
+G:\00农情速报\qgnq.git\trunk\WebApi\WebApi\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+G:\00农情速报\qgnq.git\trunk\WebApi\WebApi\bin\roslyn\Microsoft.CSharp.Core.targets
+G:\00农情速报\qgnq.git\trunk\WebApi\WebApi\bin\roslyn\Microsoft.VisualBasic.Core.targets
+G:\00农情速报\qgnq.git\trunk\WebApi\WebApi\bin\roslyn\System.Collections.Immutable.dll
+G:\00农情速报\qgnq.git\trunk\WebApi\WebApi\bin\roslyn\System.Reflection.Metadata.dll
+G:\00农情速报\qgnq.git\trunk\WebApi\WebApi\bin\roslyn\vbc.exe
+G:\00农情速报\qgnq.git\trunk\WebApi\WebApi\bin\roslyn\VBCSCompiler.exe
+G:\00农情速报\qgnq.git\trunk\WebApi\WebApi\bin\roslyn\VBCSCompiler.exe.config
+G:\00农情速报\qgnq.git\trunk\WebApi\WebApi\bin\WebApi.dll.config
+G:\00农情速报\qgnq.git\trunk\WebApi\WebApi\bin\WebApi.dll
+G:\00农情速报\qgnq.git\trunk\WebApi\WebApi\bin\WebApi.pdb
+G:\00农情速报\qgnq.git\trunk\WebApi\WebApi\bin\Antlr3.Runtime.dll
+G:\00农情速报\qgnq.git\trunk\WebApi\WebApi\bin\Microsoft.AI.Agent.Intercept.dll
+G:\00农情速报\qgnq.git\trunk\WebApi\WebApi\bin\Microsoft.AI.DependencyCollector.dll
+G:\00农情速报\qgnq.git\trunk\WebApi\WebApi\bin\Microsoft.AI.PerfCounterCollector.dll
+G:\00农情速报\qgnq.git\trunk\WebApi\WebApi\bin\Microsoft.AI.ServerTelemetryChannel.dll
+G:\00农情速报\qgnq.git\trunk\WebApi\WebApi\bin\Microsoft.AI.Web.dll
+G:\00农情速报\qgnq.git\trunk\WebApi\WebApi\bin\Microsoft.AI.WindowsServer.dll
+G:\00农情速报\qgnq.git\trunk\WebApi\WebApi\bin\Microsoft.ApplicationInsights.dll
+G:\00农情速报\qgnq.git\trunk\WebApi\WebApi\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+G:\00农情速报\qgnq.git\trunk\WebApi\WebApi\bin\Microsoft.Web.Infrastructure.dll
+G:\00农情速报\qgnq.git\trunk\WebApi\WebApi\bin\Newtonsoft.Json.dll
+G:\00农情速报\qgnq.git\trunk\WebApi\WebApi\bin\SunGolden.DBUtils.dll
+G:\00农情速报\qgnq.git\trunk\WebApi\WebApi\bin\SunGolden.Encryption.dll
+G:\00农情速报\qgnq.git\trunk\WebApi\WebApi\bin\System.Net.Http.Formatting.dll
+G:\00农情速报\qgnq.git\trunk\WebApi\WebApi\bin\System.Web.Helpers.dll
+G:\00农情速报\qgnq.git\trunk\WebApi\WebApi\bin\System.Web.Http.dll
+G:\00农情速报\qgnq.git\trunk\WebApi\WebApi\bin\System.Web.Http.WebHost.dll
+G:\00农情速报\qgnq.git\trunk\WebApi\WebApi\bin\System.Web.Mvc.dll
+G:\00农情速报\qgnq.git\trunk\WebApi\WebApi\bin\System.Web.Optimization.dll
+G:\00农情速报\qgnq.git\trunk\WebApi\WebApi\bin\System.Web.Razor.dll
+G:\00农情速报\qgnq.git\trunk\WebApi\WebApi\bin\System.Web.WebPages.Deployment.dll
+G:\00农情速报\qgnq.git\trunk\WebApi\WebApi\bin\System.Web.WebPages.dll
+G:\00农情速报\qgnq.git\trunk\WebApi\WebApi\bin\System.Web.WebPages.Razor.dll
+G:\00农情速报\qgnq.git\trunk\WebApi\WebApi\bin\WebGrease.dll
+G:\00农情速报\qgnq.git\trunk\WebApi\WebApi\bin\Npgsql.dll
+G:\00农情速报\qgnq.git\trunk\WebApi\WebApi\bin\Mono.Security.dll
+G:\00农情速报\qgnq.git\trunk\WebApi\WebApi\bin\SunGolden.DBUtils.pdb
+G:\00农情速报\qgnq.git\trunk\WebApi\WebApi\bin\SunGolden.Encryption.pdb
+G:\00农情速报\qgnq.git\trunk\WebApi\WebApi\bin\Microsoft.AI.DependencyCollector.xml
+G:\00农情速报\qgnq.git\trunk\WebApi\WebApi\bin\Microsoft.AI.ServerTelemetryChannel.xml
+G:\00农情速报\qgnq.git\trunk\WebApi\WebApi\bin\Microsoft.AI.Web.xml
+G:\00农情速报\qgnq.git\trunk\WebApi\WebApi\bin\Microsoft.AI.WindowsServer.xml
+G:\00农情速报\qgnq.git\trunk\WebApi\WebApi\bin\Microsoft.ApplicationInsights.xml
+G:\00农情速报\qgnq.git\trunk\WebApi\WebApi\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+G:\00农情速报\qgnq.git\trunk\WebApi\WebApi\bin\Newtonsoft.Json.xml
+G:\00农情速报\qgnq.git\trunk\WebApi\WebApi\bin\System.Net.Http.Formatting.xml
+G:\00农情速报\qgnq.git\trunk\WebApi\WebApi\bin\System.Web.Helpers.xml
+G:\00农情速报\qgnq.git\trunk\WebApi\WebApi\bin\System.Web.Http.xml
+G:\00农情速报\qgnq.git\trunk\WebApi\WebApi\bin\System.Web.Http.WebHost.xml
+G:\00农情速报\qgnq.git\trunk\WebApi\WebApi\bin\System.Web.Mvc.xml
+G:\00农情速报\qgnq.git\trunk\WebApi\WebApi\bin\System.Web.Optimization.xml
+G:\00农情速报\qgnq.git\trunk\WebApi\WebApi\bin\System.Web.Razor.xml
+G:\00农情速报\qgnq.git\trunk\WebApi\WebApi\bin\System.Web.WebPages.xml
+G:\00农情速报\qgnq.git\trunk\WebApi\WebApi\bin\System.Web.WebPages.Deployment.xml
+G:\00农情速报\qgnq.git\trunk\WebApi\WebApi\bin\System.Web.WebPages.Razor.xml
+G:\00农情速报\qgnq.git\trunk\WebApi\WebApi\bin\Antlr3.Runtime.pdb
+G:\00农情速报\qgnq.git\trunk\WebApi\WebApi\bin\zh-Hans\System.Net.Http.Formatting.resources.dll
+G:\00农情速报\qgnq.git\trunk\WebApi\WebApi\bin\zh-Hans\System.Web.Helpers.resources.dll
+G:\00农情速报\qgnq.git\trunk\WebApi\WebApi\bin\zh-Hans\System.Web.Http.resources.dll
+G:\00农情速报\qgnq.git\trunk\WebApi\WebApi\bin\zh-Hans\System.Web.Http.WebHost.resources.dll
+G:\00农情速报\qgnq.git\trunk\WebApi\WebApi\bin\zh-Hans\System.Web.Mvc.resources.dll
+G:\00农情速报\qgnq.git\trunk\WebApi\WebApi\bin\zh-Hans\System.Web.Optimization.resources.dll
+G:\00农情速报\qgnq.git\trunk\WebApi\WebApi\bin\zh-Hans\System.Web.Razor.resources.dll
+G:\00农情速报\qgnq.git\trunk\WebApi\WebApi\bin\zh-Hans\System.Web.WebPages.resources.dll
+G:\00农情速报\qgnq.git\trunk\WebApi\WebApi\bin\zh-Hans\System.Web.WebPages.Deployment.resources.dll
+G:\00农情速报\qgnq.git\trunk\WebApi\WebApi\bin\zh-Hans\System.Web.WebPages.Razor.resources.dll
+G:\00农情速报\qgnq.git\trunk\WebApi\WebApi\obj\Debug\WebApi.dll
+G:\00农情速报\qgnq.git\trunk\WebApi\WebApi\obj\Debug\WebApi.pdb
+G:\00农情速报\qgnq.git\trunk\WebApi\WebApi\bin\System.Web.Cors.dll
+G:\00农情速报\qgnq.git\trunk\WebApi\WebApi\bin\System.Web.Http.Cors.dll
+G:\00农情速报\qgnq.git\trunk\WebApi\WebApi\bin\System.Web.Http.Cors.xml
