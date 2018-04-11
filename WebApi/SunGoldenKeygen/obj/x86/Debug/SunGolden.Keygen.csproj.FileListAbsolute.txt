@@ -1,0 +1,8 @@
+G:\00农情速报\qgnq.git\trunk\WebApi\SunGoldenKeygen\bin\Debug\SunGolden.Keygen.exe.config
+G:\00农情速报\qgnq.git\trunk\WebApi\SunGoldenKeygen\bin\Debug\SunGolden.Keygen.exe
+G:\00农情速报\qgnq.git\trunk\WebApi\SunGoldenKeygen\bin\Debug\SunGolden.Keygen.pdb
+G:\00农情速报\qgnq.git\trunk\WebApi\SunGoldenKeygen\bin\Debug\SunGolden.Encryption.dll
+G:\00农情速报\qgnq.git\trunk\WebApi\SunGoldenKeygen\bin\Debug\SunGolden.Encryption.pdb
+G:\00农情速报\qgnq.git\trunk\WebApi\SunGoldenKeygen\obj\x86\Debug\SunGolden.Keygen.csprojResolveAssemblyReference.cache
+G:\00农情速报\qgnq.git\trunk\WebApi\SunGoldenKeygen\obj\x86\Debug\SunGolden.Keygen.exe
+G:\00农情速报\qgnq.git\trunk\WebApi\SunGoldenKeygen\obj\x86\Debug\SunGolden.Keygen.pdb
