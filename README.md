@@ -1,9 +1,5 @@
-# qgnq 全国农情系统服务端API
+# qgnq API v2
 
-### 提供API类型
-* 为客户端提供数据字典接口。
-* 为客户端提供目录配置接口。
-* 为客户端提供统计数据接口。
-* 为客户端提供空间分布数据接口。
-### 服务端
-* 采用ASP.NET MVC4 WebApi构建
+1、change data table structure
+2、change data api for each type of production
+3、change orm to dapper
